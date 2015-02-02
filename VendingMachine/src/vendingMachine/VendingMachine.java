@@ -59,7 +59,7 @@ public static void selectproduct(){
 	 		+ "$2.99 \n 5 for Miller Lite - $4.99 \n ");
 	 while(loop && total>0)
 	 {
-		 int product=keyboard.nextInt();
+		 double product=keyboard.nextDouble();
 		 
 	 if(product>=0 && product<6){
 			 
@@ -86,13 +86,15 @@ public static void selectproduct(){
 				 		+ "$2.99 \n 5 for Miller Lite - $4.99 \n ");
 	 }
 	 total = Math.round(total * 100.0) / 100.0;
+	 
 	System.out.println("Thank you. Your change is $"+total);
 	
 }
 
 public static void calculateChange()
 {
-	double change=total *100;
+	
+	int change=(int)(total *100);
 	int quarters;
 	int dimes;
 	int nickels;
@@ -104,14 +106,11 @@ public static void calculateChange()
 	change = change%10;
 	nickels = (int)(change/5);
 	change = change%5;
-	pennies = (int)(change/1);
-	
+	pennies = (int)change;
 	System.out.println("Your change is in \n" + quarters +" Quarters, \n" + 
 	dimes +" Dimes, \n"+ nickels +" Nickels, \n" + pennies+" Pennies.");
 }
 
-
-	
 }
 
 
