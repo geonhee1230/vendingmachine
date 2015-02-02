@@ -1,3 +1,4 @@
+//Geonhee Ko
 package vendingMachine;
 
 import java.util.Scanner;
